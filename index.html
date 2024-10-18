@@ -25,53 +25,55 @@
 
     <!-- Side bar -->
     <aside>
-        <div class="sidebar">
+        <div class="head">
             <h1>Notes</h1>
-            <h1 id="add-title">New Notes</h1>
+            <h1 id="add-title">New Note</h1>
 
-            <form>
-                <div class="field">
-                    <label>Title</label>
-                    <input type="text" required />
-                </div>
-
-                <div class="field">
-                    <label>Date</label>
-                    <input type="date" required />
-                </div>
-
-                <div class="field">
-                    <label>Situation</label>
-                    <select required>
-                        <option value="" disabled selected>Select...</option>
-                        <option value="goto">Visit</option>
-                        <option value="park">Car Park</option>
-                        <option value="home">Home</option>
-                        <option value="job">Job</option>
-                    </select>
-                </div>
-
-                <div class="buttons">
-                    <button>Cancel</button>
-                    <button>Add</button>
-                </div>
-            </form>
-            <ul>
-                <li>
-                    <div>
-                        <p>Station -1</p>
-                        <p>Date: 16.September 2024</p>
-                        <p>Situation: Work</p>
-                    </div>
-                    <div class="icons">
-                        <i class="bi bi-airplane-fill" id="fly"></i>
-                        <i class="bi bi-trash3-fill" id="delete"></i>
-                    </div>
-                </li>
-                <li></li>
-                <li></li>
-            </ul>
+            <i id="arrow" class="bi bi-chevron-up"></i>
         </div>
+
+        <form>
+            <div class="field">
+                <label>Başlık</label>
+                <input type="text" required />
+            </div>
+
+            <div class="field">
+                <label>Tarih</label>
+                <input type="date" required />
+            </div>
+
+            <div class="field">
+                <label>Durum</label>
+                <select required>
+                    <option value="" disabled selected>Select...</option>
+                    <option value="goto">Visit</option>
+                    <option value="park">Car Park</option>
+                    <option value="home">Home</option>
+                    <option value="job">Job</option>
+                </select>
+            </div>
+
+            <div class="buttons">
+                <button id="cancel">CANCEL</button>
+                <button>ADD</button>
+            </div>
+        </form>
+
+        <ul>
+            <li>
+                <div>
+                    <p>Station -1</p>
+                    <p>Date: 16.September 2024</p>
+                    <p>Situation: Work</p>
+                </div>
+
+                <div class="icons">
+                    <i class="bi bi-airplane-fill" id="fly"></i>
+                    <i class="bi bi-trash3-fill" id="delete"></i>
+                </div>
+            </li>
+        </ul>
     </aside>
 
     <!--  MAP  -->

@@ -14,8 +14,7 @@ body {
     height: 100vh;
 }
 
-
-/* SIDEBAR */
+/* sidebar */
 
 aside {
     position: fixed;
@@ -28,12 +27,49 @@ aside {
     border-radius: 10px;
     color: #fff;
     overflow: hidden;
-    padding: 0 20px;
+    transition: all 0.5s;
+}
+
+/* gizli mod */
+.hide {
+    height: 90px !important;
+}
+
+.hide .head {
+    margin-bottom: 20px;
+}
+
+.hide #arrow {
+    rotate: 180deg;
+}
+
+.hide ul,
+.hide form {
+    display: none !important;
+}
+
+/* form modu */
+
+.add {
+    height: 390px;
+}
+
+.add form {
+    display: flex;
+}
+
+.add #add-title {
+    display: block;
+}
+
+.add ul,
+.add h1 {
+    display: none;
 }
 
 @media (min-width: 768px) {
     aside {
-        height: 70vh;
+        height: 93vh;
     }
 }
 
@@ -41,20 +77,35 @@ aside:hover {
     background: rgba(53, 53, 53, 1);
 }
 
-aside h1 {
+aside .head {
     font-family: "Indie Flower", cursive;
     text-align: center;
-    font-size: 25px;
     background: rgba(53, 53, 53);
     border-radius: 10px;
     letter-spacing: 3px;
     padding: 5px;
     margin: 20px 20px 0px 20px;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
 }
 
+aside .head #arrow {
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
 
-/* LIST SIDE */
+aside .head #arrow:hover {
+    filter: drop-shadow(0 0 10px white);
+}
 
+aside .head h1 {
+    flex: 1;
+    font-size: 25px;
+}
+
+/* liste alanı */
 ul {
     padding: 20px;
     margin-top: 10px;
@@ -77,20 +128,20 @@ ul li {
 }
 
 ul li p:first-child {
-    font-size: 20px;
     font-family: "Indie Flower", cursive;
+    font-size: 20px;
 }
 
 ul li .icons {
     display: flex;
-    gap: 10px;
     flex-direction: column;
+    gap: 10px;
 }
 
 ul li i {
-    font-size: 20px;
-    cursor: pointer;
     transition: all 0.3s;
+    cursor: pointer;
+    font-size: 20px;
 }
 
 ul li i:hover {
@@ -107,24 +158,23 @@ ul li #delete:hover {
     filter: drop-shadow(0 0 10px crimson);
 }
 
-
-/* FORM */
-
+/* Form */
 #add-title {
     display: none;
 }
 
 form {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 20px;
-    margin: 30px 0;
+    margin: 10px 0;
+    padding: 20px;
 }
 
 form .field {
     display: flex;
-    gap: 6px;
     flex-direction: column;
+    gap: 6px;
 }
 
 form input,
@@ -141,16 +191,16 @@ form .buttons {
 }
 
 form .buttons button {
+    font-family: "poppins";
     flex: 1;
     cursor: pointer;
     border: none;
     outline: none;
     padding: 8px;
     border-radius: 10px;
-    background-color: black;
+    background: black;
     color: white;
     font-weight: 600;
-    font-family: "poppins";
     transition: all 0.3s;
 }
 
@@ -158,19 +208,6 @@ form .buttons button:hover {
     filter: brightness(60%);
 }
 
-form .buttons button:last-child {
-    background-color: #727173;
-}
-
-.add form {
-    display: flex;
-}
-
-.add #add-title {
-    display: block;
-}
-
-.add ul,
-.add h1 {
-    display: none;
+form .buttons button:first-child {
+    background: #727171;
 }
